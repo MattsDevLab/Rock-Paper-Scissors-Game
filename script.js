@@ -1,6 +1,5 @@
     let humanScore = 0;
     let computerScore = 0;
-
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
 
@@ -44,7 +43,11 @@
         }
    }
 
-   playRound(humanSelection, computerSelection);
+    function playGame(){
+        playRound(humanSelection, computerSelection);
+    }
+
+    playGame();
 
     console.log(`Human: ${humanSelection}`);
     console.log(`Computer choice: ${computerSelection}`);
