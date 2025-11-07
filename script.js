@@ -16,10 +16,17 @@
         const selectionOptions = document.querySelectorAll("button");
         const scoreboardHuman = document.querySelector("#human-score");
         const scoreboardComp = document.querySelector("#comp-score");
+        const winnerMsg = document.querySelector("#winnerMsg");
 
         function updateScoreboard(){
             if (scoreboardHuman) scoreboardHuman.textContent = humanScore;
             if (scoreboardComp) scoreboardComp.textContent = computerScore;
+
+            if(humanScore >= 5){
+                alert("Human you are the winner!!!") ;
+            } else if(computerScore >= 5){
+                alert("Computer is the winner!!!!");
+            }
         }
 
         function playRound(humanChoice, computerChoice){
@@ -58,5 +65,3 @@
     }
 
     playGame();
-
-    
