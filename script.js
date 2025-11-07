@@ -22,7 +22,7 @@
             if (scoreboardComp) scoreboardComp.textContent = computerScore;
 
             if(humanScore >= 5){
-                alert("Human you are the winner!!!") ;
+                alert("Human you are the winner!!!");
             } else if(computerScore >= 5){
                 alert("Computer is the winner!!!!");
             }
