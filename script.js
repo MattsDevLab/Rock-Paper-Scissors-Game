@@ -16,7 +16,6 @@
         const selectionOptions = document.querySelectorAll("button");
         const scoreboardHuman = document.querySelector("#human-score");
         const scoreboardComp = document.querySelector("#comp-score");
-        const winnerMsg = document.querySelector("#winnerMsg");
 
         function updateScoreboard(){
             if (scoreboardHuman) scoreboardHuman.textContent = humanScore;
