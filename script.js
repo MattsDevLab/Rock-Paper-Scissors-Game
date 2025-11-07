@@ -1,6 +1,5 @@
     // const humanSelection = getHumanChoice();
     // const computerSelection = getComputerChoice();
-
     function getComputerChoice(){
         let choice =  Math.floor((Math.random() * 3));
 
@@ -17,6 +16,15 @@
         return prompt().toLowerCase();
     }
 
+    const selectionOptions = document.querySelectorAll('button');
+
+    selectionOptions.forEach((button) =>{
+        button.addEventListener('click', () => {
+            const playerSelection = button.value;
+            console.log(playerSelection);
+        });
+    });
+
     function playGame(){
         let humanScore = 0;
         let computerScore = 0;
@@ -25,7 +33,7 @@
             if(humanChoice === "rock" && computerChoice == "scissors"){
                 console.log( "You win! Rock beats Scissors");
                 return humanScore++;
-            } else if(humanChoice === "scissors" && computerChoice == "rock"){
+            } else if(humanChoice === "scissors" && computerChoice === "rock"){
                 console.log( "You loose! Rock beats Scissors");
                 return computerScore++;
             } else if(humanChoice === "scissors" && computerChoice === "paper"){
@@ -45,11 +53,11 @@
             }
         }
 
-        let result1 = playRound(getHumanChoice(), getComputerChoice());
-        let result2 = playRound(getHumanChoice(), getComputerChoice());
-        let result3 = playRound(getHumanChoice(), getComputerChoice());
-        let result4 = playRound(getHumanChoice(), getComputerChoice());
-        let result5 = playRound(getHumanChoice(), getComputerChoice());
+        // let result1 = playRound(getHumanChoice(), getComputerChoice());
+        // let result2 = playRound(getHumanChoice(), getComputerChoice());
+        // let result3 = playRound(getHumanChoice(), getComputerChoice());
+        // let result4 = playRound(getHumanChoice(), getComputerChoice());
+        // let result5 = playRound(getHumanChoice(), getComputerChoice());
 
         console.log(`Human score total: ${humanScore}`);
         console.log(`Computer score total: ${computerScore}`);
